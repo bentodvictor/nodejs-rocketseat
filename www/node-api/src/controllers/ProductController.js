@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const Product = mongoose.model('Product');
 
 module.exports = {
-  // GET ALL
+  // Find all the POSTs from DB
   async index(req, res) {
     const {page =  1} = req.query;
     const products = await Product.paginate({/* condições/filtros */}, 
